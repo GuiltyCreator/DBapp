@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.a7279.db.activity.QuestionDetaiActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/answer_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:popupTheme="@style/ThemeOverlay.AppCompat.Light"></android.support.v7.widget.Toolbar>
+    <ImageView
+        android:id="@+id/question_detai_favorite"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_favorite"/>
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/answer_swipe_refresh"
+                android:layout_below="@id/answer_toolbar"
+                android:layout_above="@id/input_box_layout"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <View
+                        android:id="@+id/question_detai_segmenting"
+                        android:layout_width="match_parent"
+                        android:layout_height="7dip"
+                        android:background="#D3D3D3"
+                        />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/answer_recycler_view"
+                        android:layout_below="@id/question_detai_segmenting"
+                        ></android.support.v7.widget.RecyclerView>
+                </RelativeLayout>
+
+            </android.support.v4.widget.SwipeRefreshLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/input_box_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/shape_input_box"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/answer_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:hint="回复问题"
+                    android:background="@drawable/shape_input_edit"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:textAllCaps="false"
+                    android:maxHeight="100dp"
+                    android:minHeight="40dp"
+                    android:layout_marginLeft="5dp"
+                    />
+                <ImageView
+                    android:id="@+id/answer_input_image"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_add"/>
+                <ImageView
+                    android:id="@+id/answer_send"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_send"
+                    />
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:id="@+id/answer_image_send"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="400dp"
+                    android:maxWidth="300dp"
+                    android:visibility="gone"
+
+                    />
+                <ImageView
+                    android:id="@+id/cancel_answer_image_send"
+                    android:layout_width="30dp"
+                    android:src="@drawable/ic_close"
+                    android:layout_height="30dp"
+                    android:layout_toRightOf="@id/answer_image_send"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone"
+                    />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>

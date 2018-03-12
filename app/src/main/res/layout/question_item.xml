@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    >
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/question_asker"
+        android:padding="5dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/question_name"
+        android:textSize="15dp"
+        android:layout_toRightOf="@id/question_asker"
+        android:layout_marginTop="5dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/question_time"
+        android:textSize="10dp"
+        android:layout_toRightOf="@id/question_asker"
+        android:layout_below="@id/question_name"
+        android:layout_marginTop="5dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/question_title"
+        android:layout_below="@id/question_asker"
+        android:textSize="25dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/question_text"
+        android:layout_below="@id/question_title"
+        android:textSize="15dp"
+        android:textAllCaps="false"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:maxEms="50"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:maxHeight="325dp"
+        android:paddingBottom="10dp"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/question_image"
+        android:layout_below="@id/question_text"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:adjustViewBounds="true"
+        android:maxHeight="400dp"
+        android:maxWidth="300dp"
+        android:visibility="gone"/>
+
+
+    <ImageView
+        android:id="@+id/question_favorite"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        />
+
+
+    <ImageView
+        android:id="@+id/question_naive"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_toLeftOf="@id/question_favorite"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"/>
+    <TextView
+        android:id="@+id/question_naive_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_toLeftOf="@id/question_naive"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="5dp"/>
+
+    <ImageView
+        android:id="@+id/question_exciting"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_toLeftOf="@id/question_naive_count"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        />
+    <TextView
+        android:id="@+id/question_exciting_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_toLeftOf="@id/question_exciting"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="5dp"/>
+    
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="My_EdiTextView">
+    <attr name="hint"  format="string"></attr>
+
+        <attr name="text" format="string"></attr>
+
+        <attr name="InputType" format="integer">
+            <flag name="password" value="128"></flag>
+            <flag name="normal" value="0"></flag>
+
+        </attr>
+</declare-styleable>
+</resources>

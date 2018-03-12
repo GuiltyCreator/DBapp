@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/usermessege_relativeLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@color/colorPrimary">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/usermessege_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_collapseMode="pin" />
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/usermessege_image"
+        android:src="@drawable/nobody_image"
+        android:layout_centerInParent="true" />
+    <TextView
+        android:id="@+id/usermessege_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/usermessege_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textColor="#FFF"
+        android:textSize="20sp"/>
+
+    <Button
+        android:id="@+id/reset_Password_Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="修改密码"
+        android:textSize="20dp"
+        android:background="@drawable/shape_button_red"
+        android:layout_above="@id/logout_Button"
+        android:layout_marginBottom="20dp"/>
+    <Button
+        android:id="@+id/logout_Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="登出"
+        android:textSize="20dp"
+        android:background="@drawable/shape_button_red"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"/>
+
+
+</RelativeLayout>
